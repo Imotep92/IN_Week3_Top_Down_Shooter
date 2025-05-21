@@ -45,7 +45,7 @@ public class playerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch a projectile from where player is facing
-            Destroy(Instantiate(projectilePrefab, transform.position + spawnOffset, Quaternion.LookRotation(transform.forward)), 1);
+            Destroy(Instantiate(projectilePrefab, transform.position + spawnOffset, Quaternion.LookRotation(transform.forward)), 5);
         }
 
 
