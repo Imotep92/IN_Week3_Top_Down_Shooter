@@ -1,23 +1,49 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class playerController : MonoBehaviour
 {
-    public float speed;
-    public float horizontalInput;
-    public float forwardInput;
-    public float rotationSpeed = 450.0f;
+    #region player speed, inputs, contraints and lives
+    private float speed = 10.0f;
+    private float rotationSpeed = 450.0f;
+   
+    private float horizontalInput;
+    private float forwardInput;
+    
+    private float xRange = 21;
+    private float zRange = 13;
 
-    public float xRange = 21;
-    public float zRange = 13;
+    public int lives = 3;
+    public int maxLives;
+    public TMP_Text livesText;
+    #endregion player speed, inputs, contraints and lives
 
     public GameObject projectilePrefab;
     public Vector3 spawnOffset;
-    
+
+   
+    public int score;
+    public TMP_Text scoreText;
+
+    void Start()
+    {
+        maxLives = lives;
+    }
 
     // Update is called once per frame
     void Update()
     {
+
+        scoreText.text = "Score: " + score;
+
+        livesText.text = "Lives: " + lives;
+
+        if (lives <= 0)
+        {
+            Debug.Log("GameOver");
+            Destroy(gameObject);
+        }
 
         #region Player Movement
 
@@ -48,6 +74,13 @@ public class playerController : MonoBehaviour
             Destroy(Instantiate(projectilePrefab, transform.position + spawnOffset, Quaternion.LookRotation(transform.forward)), 5);
         }
 
+        //pause
+
+       /* if (Input.GetKeyDown(KeyCode.P))
+        {
+            // pause menu scene 0
+            SceneManager.LoadScene(0);
+        }*/
 
         #region Boundary contraints 
 
@@ -75,7 +108,7 @@ public class playerController : MonoBehaviour
         }
         #endregion Boundary contraints 
 
-
+        
     }
 
 }

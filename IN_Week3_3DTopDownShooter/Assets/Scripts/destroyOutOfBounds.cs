@@ -6,8 +6,8 @@ public class destroyOutOfBounds : MonoBehaviour
     private float topBound = 30;
     private float lowerBound = -20;
 
-    public float xRange = 30;
-    public float zRange = 20;
+    private float xRange = 30;
+    private float zRange = 20;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

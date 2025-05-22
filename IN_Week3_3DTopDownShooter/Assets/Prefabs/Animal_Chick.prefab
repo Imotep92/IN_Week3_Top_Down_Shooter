@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 52473658981241416}
   m_Layer: 0
   m_Name: Animal_Chick
-  m_TagString: Untagged
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d83772965fcb4caa83bb7acec682796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6.5
+  speed: 3.25
 --- !u!114 &5686642424491333822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6d53c1bb9874fd4a5f4f1503830ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRange: 21
-  zRange: 13
 --- !u!65 &4678062428174117750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -168,8 +166,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.2092645, y: 5.938043, z: 7.7900667}
-  m_Center: {x: 0.006242221, y: 3.0182133, z: 0.22468245}
+  m_Size: {x: 3.2092645, y: 10.80214, z: 7.7900667}
+  m_Center: {x: 0.006242221, y: 5.450262, z: 0.22468245}
 --- !u!54 &52473658981241416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -195,7 +193,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &3965302455807369258
 GameObject:

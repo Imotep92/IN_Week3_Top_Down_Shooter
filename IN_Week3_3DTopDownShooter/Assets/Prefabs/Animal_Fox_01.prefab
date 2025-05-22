@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 735843701487986168}
   m_Layer: 0
   m_Name: Animal_Fox_01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d83772965fcb4caa83bb7acec682796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
 --- !u!114 &5123678080662918299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,8 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6d53c1bb9874fd4a5f4f1503830ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRange: 21
-  zRange: 13
 --- !u!54 &7009748130380136774
 Rigidbody:
   m_ObjectHideFlags: 0
