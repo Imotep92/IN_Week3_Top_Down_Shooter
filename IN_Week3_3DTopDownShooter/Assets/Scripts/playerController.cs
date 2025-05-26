@@ -26,6 +26,9 @@ public class playerController : MonoBehaviour
     public int score;
     public TMP_Text scoreText;
 
+    public gameManagerScript gameManager;
+    private bool isdead;
+
     void Start()
     {
         maxLives = lives;
@@ -39,8 +42,10 @@ public class playerController : MonoBehaviour
 
         livesText.text = "Lives: " + lives;
 
-        if (lives <= 0)
+        if (lives <= 0 && !isdead)
         {
+            isdead = true;
+            gameManager.gameOver();
             Debug.Log("GameOver");
             Destroy(gameObject);
         }
