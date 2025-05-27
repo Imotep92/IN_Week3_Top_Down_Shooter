@@ -1,23 +1,25 @@
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class gameManagerScript : MonoBehaviour
 {
 
     public static bool GameIsPaused = false; //add pause function to this script
 
-    //public static bool GameIsOver = true;
+    public static bool GameIsOver = false;
     public GameObject gameOverUI;
 
     public GameObject pauseMenuUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))  //keycode input for pause menu "Escape"
@@ -30,17 +32,6 @@ public class gameManagerScript : MonoBehaviour
             {
                 Pause();
             }
-
-           /* if (GameIsOver)
-            {
-                //do nothing
-            }
-            else
-            {
-                Pause();
-            }*/
-
-
         }
     }
 
@@ -62,15 +53,19 @@ public class gameManagerScript : MonoBehaviour
     {
         gameOverUI.SetActive(true);  //game Over screen
         Time.timeScale = 0f;  //stops game running in background
+        GameIsOver = true;
     }
 
-    public void Restart() //restarting the game from menu or game over
+    public void Restart() //restarting the game
     {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
         Debug.Log("reset the scene");
     }
 
     public void QuitGame() //quit the game
     {
+        Application.Quit();
         Debug.Log("Quitting game...");
     }
 

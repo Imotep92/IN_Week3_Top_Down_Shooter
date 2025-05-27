@@ -4,8 +4,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
 
-    private float xRange = 25.0f;
-    private float zRange = 15.0f;
+    private float xRange = 22.0f;
+    private float zRange = 11.0f;
 
     public animalInfo[] animalInformation;
 
@@ -30,7 +30,7 @@ public class SpawnManager : MonoBehaviour
     { 
         int animalIndex = Random.Range(0, animalPrefabs.Length); Vector3 spawnPosition = new Vector3(Random.Range(-xRange, xRange), 0, Random.Range(zRange, -zRange));
 
-        Instantiate(animalPrefabs[animalIndex], spawnPosition, Quaternion.Euler(0, Random.Range(0, 360), 0));
+        Destroy(Instantiate(animalPrefabs[animalIndex], spawnPosition, Quaternion.Euler(0, Random.Range(0, 360), 0)), 10);
 
     }
 

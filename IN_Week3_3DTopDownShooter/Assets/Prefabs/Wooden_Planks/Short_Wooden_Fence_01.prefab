@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676607799026492}
+  - component: {fileID: 8385548958334685427}
   m_Layer: 0
   m_Name: Short_Wooden_Fence_01
   m_TagString: Untagged
@@ -35,6 +36,27 @@ Transform:
   - {fileID: 2024229203701844674}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8385548958334685427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437713485304574765}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.7766557, y: 2.0634494, z: 0.7908764}
+  m_Center: {x: -0.05310273, y: -0.3808203, z: 0.104561806}
 --- !u!1001 &1783376689196208548
 PrefabInstance:
   m_ObjectHideFlags: 0
